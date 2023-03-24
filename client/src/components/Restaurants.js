@@ -9,4 +9,4 @@ const Restaurants = (props) => {
         </div>
 )}
 
-export default Restau;
+export default Restaurants;
