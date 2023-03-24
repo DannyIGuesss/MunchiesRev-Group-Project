@@ -7,4 +7,4 @@ const UpdateReview = (props) => {
         </div>
 )}
 
-export default ViewReview;
+export default UpdateReview;
