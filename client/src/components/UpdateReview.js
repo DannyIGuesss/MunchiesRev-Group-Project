@@ -9,7 +9,6 @@ const UpdateReview = (props) => {
                 <div className='nav-btn'>
                     <button><Link to={'/'}>Home</Link></button>
                     <button><Link to={'/'}>Logout</Link></button>
-                    <button>Test</button>
                 </div>
             </nav>
             <div class="row">
