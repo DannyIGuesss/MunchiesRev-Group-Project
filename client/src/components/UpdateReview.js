@@ -5,9 +5,14 @@ import ('../cssFiles/navBar.css')
 const UpdateReview = (props) => {
     return (
         <div>
+            <nav>
+                <div className='nav-btn'>
+                    <button><Link to={'/'}>Home</Link></button>
+                    <button><Link to={'/'}>Logout</Link></button>
+                </div>
+            </nav>
             <div class="row">
                 <div class="mx-auto col-10 col-md-8 col-lg-6">
-                    <nav>
                 <h1 class="mx-auto col-10 col-md-8 col-lg-6">MunchiesRev a Review</h1>
                     <form class="form-example"
                     // onSubmit={updateReview}
@@ -25,11 +30,6 @@ const UpdateReview = (props) => {
                     </form>
                 </div>
             </div>
-                <div className='nav-btn'>
-                    <button><Link to={'/'}>Home</Link></button>
-                    <button><Link to={'/'}>Logout</Link></button>
-                </div>
-            </nav>
         </div>
 )}
 
