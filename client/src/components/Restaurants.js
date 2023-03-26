@@ -1,10 +1,14 @@
 // *****Dashboard to see all restraunts*****
 
-import React, {useState} from 'react';
+import React, {useContext, useState} from 'react';
 import {Link} from 'react-router-dom'
+import { LoggedUserContext } from '../context/loggedUserContext'
 import ('../cssFiles/navBar.css')
 
 const Restaurants = (props) => {
+    const {loggedUser, setLoggedUser} = useContext(LoggedUserContext)
+
+
     return (
         <div>
             <nav>
@@ -14,6 +18,9 @@ const Restaurants = (props) => {
                     <button><Link to={'/'}>Logout</Link></button>
                 </div>
             </nav>
+            <div>
+                <h2>Hello {loggedUser.firstName}</h2>
+            </div>
         </div>
 )}
 

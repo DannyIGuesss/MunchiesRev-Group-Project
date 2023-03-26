@@ -1,8 +1,13 @@
-import React, {useState} from 'react';
+import React, {useContext, useState} from 'react'; // 'useContext' logged feature
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 import {Link} from 'react-router-dom'
-const Login = ({setUser}) => {
+import { LoggedUserContext } from '../context/loggedUserContext'; // logged feature
+
+
+
+const Login = (props) => {
+    const {loggedUser, setLoggedUser} = useContext(LoggedUserContext) // logged feature
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [errors, setErrors] = useState('')
@@ -12,7 +17,7 @@ const Login = ({setUser}) => {
         axios.post('http://localhost:8000/api/login',{ email, password}, { withCredentials: true })
             .then ( res => {
                 console.log('user', res.data.user);
-                setUser(res.data.user)//sets the user globally so other sites will have information of your account 
+                setLoggedUser(res.data.user)//sets the user globally so other sites will have information of your account 
                 navigate("/Restaurants");//sends you back to the restaurant site
             })
             .catch( err => {console.log(err.response.data); setErrors(err.response.data.errors)} )
