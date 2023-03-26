@@ -1,5 +1,12 @@
 import React, {useState} from 'react';
-
+import axios from 'axios'
+import { useNavigate } from 'react-router-dom'
+import {Link} from 'react-router-dom'
+const Login = ({setUser}) => {
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
+    const [errors, setErrors] = useState('')
+    const navigate = useNavigate()
     const handleSubmit = (e) => {
         e.preventDefault()
         axios.post('http://localhost:8000/api/login',{ email, password}, { withCredentials: true })
@@ -18,21 +25,23 @@ import React, {useState} from 'react';
                     <button><Link to={'/'}>Home</Link></button>
                     <button><Link to={'/register'}>Register</Link></button>
                 </div>
-            </nav>    <h2>
+            </nav>    
+            <h2 class="mx-auto col-10 col-md-8 col-lg-6">
                 Login
             </h2>
             {errors && <span className='accent'>{errors}</span>}
-            <form onSubmit = {handleSubmit}>
-                {/* email */}
-                <label>
-                    Email:
-                    <input type='text' onChange={ e => setEmail(e.target.value) }/>
-                </label>
-                {/* password */}
-                <label>
-                    Password:
-                    <input type='password' onChange={ e => setPassword(e.target.value) } />
-                </label>
+            <form class="mx-auto col-10 col-md-8 col-lg-6" onSubmit = {handleSubmit}>
+                <div class="form-group ">
+                    {/* email */}
+                    <label >Email:</label>
+                    <input class="form-control" type='text' onChange={ e => setEmail(e.target.value) }/>
+                    
+                </div>
+                <div class="form-group ">
+                    {/* password */}
+                    <label>Password:</label>
+                    <input class="form-control" type='password' onChange={ e => setPassword(e.target.value) } />
+                </div>
                 <input class= 'glow-on-hover' type='submit' value='Submit'/>
             </form>
         </div>
