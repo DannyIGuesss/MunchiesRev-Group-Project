@@ -1,0 +1,45 @@
+.main-body {
+    display: flex;
+    height: 90vh;
+    background-color: #FFFF99;
+}
+
+.left-side {
+    width: 50%;
+    text-align: center;
+    margin: 10% 0;
+}
+
+.right-side {
+    width: 50%;
+    text-align: center;
+    margin: 10% 0;
+}
+
+.slider {
+    width: 80%;
+    height: 80%;
+    background: url('../images/restaurants1.jpg');
+    background-size: cover;
+    margin: auto;
+    animation: slide 20s infinite;
+    box-shadow: -4px 14px 47px 19px rgba(0,0,0,0.75);
+}
+@keyframes slide{
+    25%{
+        background: url('../images/restaurants2.jpg');
+        background-size: cover;
+    }
+    50%{
+        background: url('../images/restaurants3.jpg');
+        background-size: cover;
+    }
+    75%{
+        background: url('../images/restaurants4.jpg');
+        background-size: cover;
+    }
+    100%{
+        background: url('../images/restaurants1.jpg');
+        background-size: cover;
+    }
+}
