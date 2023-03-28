@@ -18,7 +18,7 @@ module.exports = {
                 const newUser = await User.create(req.body);
                 // * jwt.sign creates the token the first thing we pass is what we want to serialize (payload)
                 // * the second param is a secret key to serialize 
-                const userToken = jwt.sign({ _id: newUser._id, email: newUser.email }, secret, { expiresIn: '2h' })
+                const userToken = jwt.sign({ _id: newUser._id, email: newUser.email, username: newUser.firstName }, secret, { expiresIn: '2h' })
                 console.log(userToken);
                 // Sending back the logged in user 
                 res.status(201).cookie('userToken', userToken, { httpOnly: true, maxAge: 2 * 60 * 60 * 1000 }).cookie('userId', newUser._id.toString()).json({ message: 'User logged in', user: newUser })
@@ -40,7 +40,7 @@ module.exports = {
                 console.log(passwordsMatch);
                 if (passwordsMatch) {
                     // console.log('HERE2');
-                    const userToken = jwt.sign({ _id: user._id, email: user.email }, secret, { expiresIn: '2h' })
+                    const userToken = jwt.sign({ _id: user._id, email: user.email, username: user.firstName }, secret, { expiresIn: '2h' })
                     console.log(userToken);
                     // Sending back the logged in user 
                     res.cookie('userToken', userToken, { httpOnly: true, maxAge: 2 * 60 * 60 * 1000 }).cookie('userId', user._id.toString()).status(201).json({ message: 'User logged in', user: user })
