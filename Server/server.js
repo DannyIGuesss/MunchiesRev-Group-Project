@@ -11,6 +11,7 @@ app.use(express.json(), express.urlencoded({ extended: true }));
 //require routes to be added here when routes are ready
 const userRoutes = require('./routes/users.routes');
 const reviewRoutes = require('./routes/review.routes');
+const restaurantRoutes = require('./routes/restaurant.routes')
 userRoutes(app);
 reviewRoutes(app);
     
