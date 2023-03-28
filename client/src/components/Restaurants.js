@@ -14,12 +14,12 @@ const Restaurants = (props) => {
             <nav>
                 <h1>MunchiesRev</h1>
                 <div className='nav-btn'>
-                    <button><Link to={'/'}>Home</Link></button>
-                    <button><Link to={'/'}>Logout</Link></button>
+                    {!loggedUser._id ? <button><Link to={'/login'}>Login</Link></button> : <button><Link to={'/Logout'}>Logout</Link></button>}
                 </div>
             </nav>
             <div>
                 <h2>Hello {loggedUser.firstName}</h2>
+                {loggedUser._id ? <button><Link to={'/createReview'}>Create a Review</Link></button> : <h1>You need to login...</h1>}
             </div>
         </div>
 )}

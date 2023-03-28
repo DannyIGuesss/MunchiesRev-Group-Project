@@ -22,7 +22,7 @@ const ReviewSchema = new mongoose.Schema ({
     },
 
     restaurant_id: {
-        type: mongoose.Types.ObjectId,
+        type: String,
         ref: 'Restaurant'
         // refers back to our RestaurantSchema
     }

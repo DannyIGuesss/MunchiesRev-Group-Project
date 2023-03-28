@@ -1,17 +1,21 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import {Link} from 'react-router-dom'
+import { LoggedUserContext } from '../context/loggedUserContext'
 import ('../cssFiles/navBar.css')
 import('../cssFiles/landing.css')
 
 const Landing = (props) => {
+    const {loggedUser,} = useContext(LoggedUserContext)
 
     return (
         <div>
             <nav>
                 <h1>MunchiesRev</h1>
                 <div className='nav-btn'>
+                    
                     <button><Link to={'/register'}>Register</Link></button>
                     <button><Link to={'/Login'}>Login</Link></button>
+
                 </div>
             </nav>
             <div className='main-body'>
