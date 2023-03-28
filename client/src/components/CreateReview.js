@@ -1,21 +1,22 @@
 import axios from 'axios';
 import React, {useState} from 'react';
-import {Link, useNavigate} from 'react-router-dom'
+import {Link, useNavigate, useParams} from 'react-router-dom'
 import ('../cssFiles/navBar.css')
 import ('../cssFiles/reviewCU.css')
 
 const CreateReview = (props) => {
-    const [erros, setErrors] = useState([]);
+    const [errors, setErrors] = useState([]);
     const [restaurant, setRestaurant] = useState("");
     const [rating, setRating] = useState("");
     const [review, setReview] = useState("");
+    const {id} = useParams();
 
     const navigate = useNavigate();
 
     const handleSubmit = (e) => {
         e.preventDefault()
         console.log('submit review')
-        axios.post('http://localhost:8000', {
+        axios.post(`http://localhost:8000/api/postReview/${id}`, {
             restaurant: restaurant,
             rating: rating,
             review: review
