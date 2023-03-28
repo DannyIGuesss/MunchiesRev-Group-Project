@@ -41,53 +41,57 @@ const Register = (props) => {
                     <button><Link to={'/Login'}>Login</Link></button>
                 </div>
             </nav>    
-            <h2 class="mx-auto col-10 col-md-8 col-lg-6">
+            <h2 className="mx-auto col-10 col-md-8 col-lg-6">
                 Register
             </h2>
-            <form class="mx-auto col-10 col-md-8 col-lg-6" onSubmit={handleSubmit}>
-                <div class="form-group ">
+            <form className="mx-auto col-10 col-md-8 col-lg-6" onSubmit={handleSubmit}>
+                <div className="form-group ">
                     {/* first name */}
                     {errors.firstName && <span className="text-danger">{errors.firstName.message}</span>}
                     <br/>
                     <label>First Name:</label>
-                    <input class="form-control" type='text' onChange={e=>setFirstName(e.target.value)}/>
+                    <input className="form-control" type='text' onChange={e=>setFirstName(e.target.value)}/>
+
                 </div>
-                <div class="form-group">
+                <div className="form-group">
                     {/* last name */}
                     {errors.lastName && <span className="text-danger">{errors.lastName.message}</span>}
                     <br/>
                     <label>Last Name:</label>
-                    <input class="form-control" type='text' onChange={e=>setLastName(e.target.value)}/>
+                    <input className="form-control" type='text' onChange={e=>setLastName(e.target.value)}/>
+
                 </div>
-                <div class="form-group">
+                <div className="form-group">
                     {/* email */}
                     {errors.email && <span className="text-danger">{errors.email.message}</span>}
                     <br/>
                     <label>Email:</label>
-                    <input class="form-control" type='text' onChange={e=>setEmail(e.target.value)}/>
+                    <input className="form-control" type='text' onChange={e=>setEmail(e.target.value)}/>
                 </div>
-                <div class="form-group">
+                <div className="form-group">
                     {/* confirm email */}
                     {errors.email && <span className="text-danger">{errors.email.message}</span>}
                     <br/>
                     <label> Confirm Email:</label>
-                    <input  class="form-control" type='text' onChange={e=>setConfirmEmail(e.target.value)}/>
+                    <input  className="form-control" type='text' onChange={e=>setConfirmEmail(e.target.value)}/>
+
                     
                 </div>
-                <div class="form-group">
+                <div className="form-group">
                     {/* password */}
                     {errors.password && <span className="text-danger">{errors.password.message}</span>}
                     <br/>
                     <label>Password:</label>
-                    <input class="form-control" type='password' onChange={e=>setPassword(e.target.value)}/>
+                    <input className="form-control" type='password' onChange={e=>setPassword(e.target.value)}/>
                     
                 </div>
-                <div class="form-group">
+                <div className="form-group">
                     {/* confirm email */}
                     {errors.password && <span className="text-danger">{errors.password.message}</span>}
                     <br/>
                     <label>Confirm Password:</label>
-                    <input class="form-control" type='password' onChange={e=>setConfirmPassword(e.target.value)}/>
+                    <input className="form-control" type='password' onChange={e=>setConfirmPassword(e.target.value)}/>
+
                     
                 </div>
                     <input type='submit' value='Submit'/>
