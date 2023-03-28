@@ -31,23 +31,23 @@ const Login = (props) => {
                     <button><Link to={'/register'}>Register</Link></button>
                 </div>
             </nav>
-            <h2 class="mx-auto col-10 col-md-8 col-lg-6">
+            <h2 className="mx-auto col-10 col-md-8 col-lg-6">
                 Login
             </h2>
             {errors && <span className='accent'>{errors}</span>}
-            <form class="mx-auto col-10 col-md-8 col-lg-6" onSubmit = {handleSubmit}>
-                <div class="form-group ">
+            <form className="mx-auto col-10 col-md-8 col-lg-6" onSubmit = {handleSubmit}>
+                <div className="form-group ">
                     {/* email */}
                     <label >Email:</label>
-                    <input class="form-control" type='text' onChange={ e => setEmail(e.target.value) }/>
+                    <input className="form-control" type='text' onChange={ e => setEmail(e.target.value) }/>
                     
                 </div>
-                <div class="form-group ">
+                <div className="form-group ">
                     {/* password */}
                     <label>Password:</label>
-                    <input class="form-control" type='password' onChange={ e => setPassword(e.target.value) } />
+                    <input className="form-control" type='password' onChange={ e => setPassword(e.target.value) } />
                 </div>
-                <input class= 'glow-on-hover' type='submit' value='Submit'/>
+                <input className= 'glow-on-hover' type='submit' value='Submit'/>
             </form>
         </div>
 )}
