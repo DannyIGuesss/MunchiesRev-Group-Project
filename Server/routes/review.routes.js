@@ -1,6 +1,7 @@
+// TODO: 
 const ReviewController = require('../controllers/review.controller');
-// TODO: add authenticate once jwt.config file is up
+const {authenticate} = require('../config/jwt.config')
 
 module.exports = app => {
-    app.post('/api/postReview', ReviewController.postReview)
+    app.post('/api/postReview/:id', ReviewController.postReview)
 }

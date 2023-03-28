@@ -6,18 +6,25 @@ const ReviewSchema = new mongoose.Schema ({
         type: String
     },
 
+    rating: {
+        type: Number 
+    },
+
     user_id: {
         type: mongoose.Types.ObjectId,
         ref: 'User'
+        // refers back to our UserSchema
     },
 
+    // makes it easier to view in the db who posted what
     username: {
         type: String
     },
 
     restaurant_id: {
-        type: mongoose.Types.ObjectId,
+        type: String,
         ref: 'Restaurant'
+        // refers back to our RestaurantSchema
     }
 
 }, {timestamps: true})

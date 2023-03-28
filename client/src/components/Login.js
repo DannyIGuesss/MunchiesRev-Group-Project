@@ -32,6 +32,7 @@ const Login = (props) => {
                 </div>
             </nav>
             <h2 className="mx-auto col-10 col-md-8 col-lg-6">
+
                 Login
             </h2>
             {errors && <span className='accent'>{errors}</span>}

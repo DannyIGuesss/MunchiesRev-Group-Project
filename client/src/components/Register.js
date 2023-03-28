@@ -51,6 +51,7 @@ const Register = (props) => {
                     <br/>
                     <label>First Name:</label>
                     <input className="form-control" type='text' onChange={e=>setFirstName(e.target.value)}/>
+
                 </div>
                 <div className="form-group">
                     {/* last name */}
@@ -58,6 +59,7 @@ const Register = (props) => {
                     <br/>
                     <label>Last Name:</label>
                     <input className="form-control" type='text' onChange={e=>setLastName(e.target.value)}/>
+
                 </div>
                 <div className="form-group">
                     {/* email */}
@@ -72,6 +74,7 @@ const Register = (props) => {
                     <br/>
                     <label> Confirm Email:</label>
                     <input  className="form-control" type='text' onChange={e=>setConfirmEmail(e.target.value)}/>
+
                     
                 </div>
                 <div className="form-group">
@@ -88,6 +91,7 @@ const Register = (props) => {
                     <br/>
                     <label>Confirm Password:</label>
                     <input className="form-control" type='password' onChange={e=>setConfirmPassword(e.target.value)}/>
+
                     
                 </div>
                     <input type='submit' value='Submit'/>
