@@ -24,7 +24,7 @@ function App() {
           <Route exact path='/Register' element={<Register/>}/>                 {/* Register a new user */}
           <Route exact path='/Reviews/:_id' element={<Reviews/>}/>              {/* Shows all reviews for a specific restraunt */}
           <Route exact path='/CreateReview' element={<CreateReview/>}/>         {/* Create a review for a specific restraunt */}
-          <Route exact path='/UpdateReview' element={<UpdateReview/>}/>    {/* Update a specific review */}{/*/:_id*/}
+          <Route exact path='/UpdateReview/:_id' element={<UpdateReview/>}/>    {/* Update a specific review */}{/*/:_id*/}
         </Routes>
       </BrowserRouter>
       </LoggedUserProvider>

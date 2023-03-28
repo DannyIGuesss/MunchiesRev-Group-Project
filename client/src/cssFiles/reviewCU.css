@@ -1,0 +1,25 @@
+.main-body {
+    display: flex;
+    height: 90vh;
+    background-color: #FFFF99;
+}
+.left-side {
+    width: 50%;
+    text-align: center;
+    margin: 10% 0;
+}
+.right-side {
+    width: 50%;
+    text-align: center;
+    margin: 10% 0;
+}
+.submit-button {
+    background-color: #B22222;
+    border: transparent;
+    padding: 10px;
+    border-radius: 16px;
+    margin-top: 10px;
+}
+.submit-button:hover {
+    box-shadow: 0px 0px 5px 5px #5F9EA0;
+}

@@ -30,7 +30,7 @@ const Login = (props) => {
                     <button><Link to={'/'}>Home</Link></button>
                     <button><Link to={'/register'}>Register</Link></button>
                 </div>
-            </nav>    
+            </nav>
             <h2 class="mx-auto col-10 col-md-8 col-lg-6">
                 Login
             </h2>
