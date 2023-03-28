@@ -14,16 +14,16 @@ const UpdateReview = (props) => {
                 </div>
             </nav>
             
-            <div class="row">
-                <div class="mx-auto col-10 col-md-8 col-lg-6">
-                <h3 class="mx-auto col-10 col-md-8 col-lg-6">Munching a Review</h3>
-                    <form class="form-example"
+            <div className="row">
+                <div className="mx-auto col-10 col-md-8 col-lg-6">
+                <h3 className="mx-auto col-10 col-md-8 col-lg-6">Munching a Review</h3>
+                    <form className="form-example"
                     // onSubmit={updateReview}
                     >
-                        <p class="description">Error pop up</p>
-                        <div class="form-group">
-                            <label class="description">Name</label><br />
-                            <input class="form-control username" type="text" />
+                        <p className="description">Error pop up</p>
+                        <div className="form-group">
+                            <label className="description">Name</label><br />
+                            <input className="form-control username" type="text" />
                             {/* <input type="text" 
                             name="firstName" 
                             value={firstName} 
