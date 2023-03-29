@@ -1,17 +1,12 @@
 const mongoose = require('mongoose');
 
 const ReviewSchema = new mongoose.Schema ({
-
-    restaurantName: {
-        type: String
-    },
-    
     review: {
         type: String
     },
 
     rating: {
-        type: Number 
+        type: Number
     },
 
     user_id: {
