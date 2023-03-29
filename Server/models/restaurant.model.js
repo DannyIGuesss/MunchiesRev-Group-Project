@@ -1,17 +1,17 @@
-// TODO: Complete this page
-const mongoose = require('mongoose');
+// ! DO NOT TOUCH FILE
+// const mongoose = require('mongoose');
 
-const RestaurantSchema = new mongoose.Schema ({
+// const RestaurantSchema = new mongoose.Schema ({
 
-    restaurant: {
-        type: String
-    },
+//     restaurant: {
+//         type: String
+//     },
 
-    user_id: {
-        type: mongoose.Types.ObjectId,
-        ref: 'User'
-    }
+//     user_id: {
+//         type: mongoose.Types.ObjectId,
+//         ref: 'User'
+//     }
 
-}, {timestamps: true})
+// }, {timestamps: true})
 
-module.exports = mongoose.model("Restaurant", RestaurantSchema)
+// module.exports = mongoose.model("Restaurant", RestaurantSchema)
