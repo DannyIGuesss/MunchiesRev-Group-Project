@@ -48,6 +48,7 @@ const Restaurants = (props) => {
                         })
                     }
                 </div>
+                    <button><Link to={'/SeeReviews'}>See Reviews</Link></button> 
                     {loggedUser._id ? <button><Link to={'/createReview'}>Create a Review</Link></button> : <h1>You need to login...</h1>}
             </main>
 
