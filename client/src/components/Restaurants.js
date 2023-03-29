@@ -31,7 +31,7 @@ const Restaurants = (props) => {
             <nav>
                 <h1>MunchiesRev</h1>
                 <div className='nav-btn'>
-                    {!loggedUser._id ? <button><Link to={'/login'}>Login</Link></button> : <button onClick={logout}>Logout</button>}
+                    {loggedUser._id ? <button><Link to={'/login'}>Login</Link></button> : <button onClick={logout}>Logout</button>}
                 </div>
             </nav>
             <main className='main'>
@@ -48,7 +48,8 @@ const Restaurants = (props) => {
                         })
                     }
                 </div>
-                    <button><Link to={'/SeeReviews'}>See Reviews</Link></button> 
+                    <button><Link to={'/SeeReviews'}>See Reviews</Link></button>
+                    {console.log('here',loggedUser._id)}
                     {loggedUser._id ? <button><Link to={'/createReview'}>Create a Review</Link></button> : <h1>You need to login...</h1>}
             </main>
 
