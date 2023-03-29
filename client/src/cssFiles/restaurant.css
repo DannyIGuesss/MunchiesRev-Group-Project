@@ -1,0 +1,47 @@
+.html {
+    height: 100vh;
+    background-color: #FFFF99;
+}
+
+.body-container {
+    height: 70vh;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+.img-container {
+    width: 30%;
+}
+
+.img-container h3 {
+    text-align: center;
+}
+
+.imgTag{
+    height: 9rem;
+    width: 9rem;
+    margin: 0 auto;
+    display: block;
+    box-shadow: -5px 3px 5px 0px rgba(0,0,0,0.75);
+}
+
+button {
+    width: 8rem;
+    font-size: 70%;
+    display: block;
+    margin: 0 auto;
+    background-color: #B22222;
+}
+
+.main button a {
+    color: #FFFF99;
+}
+
+button:hover {
+    box-shadow: 0px 0px 5px 5px #B22222;
+}
+.main button a:hover {
+    color:#FFFF99;
+}

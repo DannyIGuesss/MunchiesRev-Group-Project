@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<!-- saved from url=(0033)http://localhost:3000/Restaurants -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <link rel="icon" href="http://localhost:3000/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#000000">
+    <meta name="description" content="Web site created using create-react-app">
+    <!-- BOOTSTRAP ONLY -->
+    <link href="./React App_files/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="./React App_files/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="apple-touch-icon" href="http://localhost:3000/logo192.png">
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="http://localhost:3000/manifest.json">
+    <!--
+      Notice the use of  in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>React App</title>
+  <script defer="" src="./React App_files/bundle.js"></script><style>body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9pbmRleC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxTQUFTO0VBQ1Q7O2NBRVk7RUFDWixtQ0FBbUM7RUFDbkMsa0NBQWtDO0FBQ3BDOztBQUVBO0VBQ0U7YUFDVztBQUNiIiwic291cmNlc0NvbnRlbnQiOlsiYm9keSB7XG4gIG1hcmdpbjogMDtcbiAgZm9udC1mYW1pbHk6IC1hcHBsZS1zeXN0ZW0sIEJsaW5rTWFjU3lzdGVtRm9udCwgJ1NlZ29lIFVJJywgJ1JvYm90bycsICdPeHlnZW4nLFxuICAgICdVYnVudHUnLCAnQ2FudGFyZWxsJywgJ0ZpcmEgU2FucycsICdEcm9pZCBTYW5zJywgJ0hlbHZldGljYSBOZXVlJyxcbiAgICBzYW5zLXNlcmlmO1xuICAtd2Via2l0LWZvbnQtc21vb3RoaW5nOiBhbnRpYWxpYXNlZDtcbiAgLW1vei1vc3gtZm9udC1zbW9vdGhpbmc6IGdyYXlzY2FsZTtcbn1cblxuY29kZSB7XG4gIGZvbnQtZmFtaWx5OiBzb3VyY2UtY29kZS1wcm8sIE1lbmxvLCBNb25hY28sIENvbnNvbGFzLCAnQ291cmllciBOZXcnLFxuICAgIG1vbm9zcGFjZTtcbn1cbiJdLCJzb3VyY2VSb290IjoiIn0= */</style><style>
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsInNvdXJjZVJvb3QiOiIifQ== */</style><style>.main-body {
+    display: flex;
+    height: 90vh;
+    background-color: #FFFF99;
+}
+
+.left-side {
+    width: 50%;
+    text-align: center;
+    margin: 10% 0;
+}
+
+.right-side {
+    width: 50%;
+    text-align: center;
+    margin: 10% 0;
+}
+
+.slider {
+    width: 80%;
+    height: 80%;
+    background: url(http://localhost:3000/static/media/restaurants1.b6f1650f1d62d2cf7688.jpg);
+    background-size: cover;
+    margin: auto;
+    animation: slide 20s infinite;
+    box-shadow: -4px 14px 47px 19px rgba(0,0,0,0.75);
+}
+@keyframes slide{
+    25%{
+        background: url(http://localhost:3000/static/media/restaurants2.253b654b42896e894356.jpg);
+        background-size: cover;
+    }
+    50%{
+        background: url(http://localhost:3000/static/media/restaurants3.86589a6be04aefca7afc.jpg);
+        background-size: cover;
+    }
+    75%{
+        background: url(http://localhost:3000/static/media/restaurants4.83838379451740adbfc8.jpg);
+        background-size: cover;
+    }
+    100%{
+        background: url(http://localhost:3000/static/media/restaurants1.b6f1650f1d62d2cf7688.jpg);
+        background-size: cover;
+    }
+}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9jc3NGaWxlcy9sYW5kaW5nLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLGFBQWE7SUFDYixZQUFZO0lBQ1oseUJBQXlCO0FBQzdCOztBQUVBO0lBQ0ksVUFBVTtJQUNWLGtCQUFrQjtJQUNsQixhQUFhO0FBQ2pCOztBQUVBO0lBQ0ksVUFBVTtJQUNWLGtCQUFrQjtJQUNsQixhQUFhO0FBQ2pCOztBQUVBO0lBQ0ksVUFBVTtJQUNWLFdBQVc7SUFDWCxtREFBNkM7SUFDN0Msc0JBQXNCO0lBQ3RCLFlBQVk7SUFDWiw2QkFBNkI7SUFDN0IsZ0RBQWdEO0FBQ3BEO0FBQ0E7SUFDSTtRQUNJLG1EQUE2QztRQUM3QyxzQkFBc0I7SUFDMUI7SUFDQTtRQUNJLG1EQUE2QztRQUM3QyxzQkFBc0I7SUFDMUI7SUFDQTtRQUNJLG1EQUE2QztRQUM3QyxzQkFBc0I7SUFDMUI7SUFDQTtRQUNJLG1EQUE2QztRQUM3QyxzQkFBc0I7SUFDMUI7QUFDSiIsInNvdXJjZXNDb250ZW50IjpbIi5tYWluLWJvZHkge1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgaGVpZ2h0OiA5MHZoO1xuICAgIGJhY2tncm91bmQtY29sb3I6ICNGRkZGOTk7XG59XG5cbi5sZWZ0LXNpZGUge1xuICAgIHdpZHRoOiA1MCU7XG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xuICAgIG1hcmdpbjogMTAlIDA7XG59XG5cbi5yaWdodC1zaWRlIHtcbiAgICB3aWR0aDogNTAlO1xuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgICBtYXJnaW46IDEwJSAwO1xufVxuXG4uc2xpZGVyIHtcbiAgICB3aWR0aDogODAlO1xuICAgIGhlaWdodDogODAlO1xuICAgIGJhY2tncm91bmQ6IHVybCgnLi4vaW1hZ2VzL3Jlc3RhdXJhbnRzMS5qcGcnKTtcbiAgICBiYWNrZ3JvdW5kLXNpemU6IGNvdmVyO1xuICAgIG1hcmdpbjogYXV0bztcbiAgICBhbmltYXRpb246IHNsaWRlIDIwcyBpbmZpbml0ZTtcbiAgICBib3gtc2hhZG93OiAtNHB4IDE0cHggNDdweCAxOXB4IHJnYmEoMCwwLDAsMC43NSk7XG59XG5Aa2V5ZnJhbWVzIHNsaWRle1xuICAgIDI1JXtcbiAgICAgICAgYmFja2dyb3VuZDogdXJsKCcuLi9pbWFnZXMvcmVzdGF1cmFudHMyLmpwZycpO1xuICAgICAgICBiYWNrZ3JvdW5kLXNpemU6IGNvdmVyO1xuICAgIH1cbiAgICA1MCV7XG4gICAgICAgIGJhY2tncm91bmQ6IHVybCgnLi4vaW1hZ2VzL3Jlc3RhdXJhbnRzMy5qcGcnKTtcbiAgICAgICAgYmFja2dyb3VuZC1zaXplOiBjb3ZlcjtcbiAgICB9XG4gICAgNzUle1xuICAgICAgICBiYWNrZ3JvdW5kOiB1cmwoJy4uL2ltYWdlcy9yZXN0YXVyYW50czQuanBnJyk7XG4gICAgICAgIGJhY2tncm91bmQtc2l6ZTogY292ZXI7XG4gICAgfVxuICAgIDEwMCV7XG4gICAgICAgIGJhY2tncm91bmQ6IHVybCgnLi4vaW1hZ2VzL3Jlc3RhdXJhbnRzMS5qcGcnKTtcbiAgICAgICAgYmFja2dyb3VuZC1zaXplOiBjb3ZlcjtcbiAgICB9XG59Il0sInNvdXJjZVJvb3QiOiIifQ== */</style><style>nav {
+    display: flex;
+    background-color: #5F9EA0;
+    width: 100%;
+    height: 10vh;
+}
+
+nav h1 {
+    display: inline-block;
+    width: 50%;
+    margin: auto 0;
+    padding-left: 2rem;
+    color: #FFFF99;
+    text-shadow: 5px 4px 2px #B22222;
+    font-size: 90px;
+}
+
+.nav-btn {
+    display: flex;
+    justify-content: end;
+    width: 50%;
+    padding-right: 2rem;
+}
+.nav-btn button {
+    margin: auto 0;
+    margin-left: 2%;
+    background-color: #FFFF99;
+}
+
+.nav-btn button:hover {
+    box-shadow: 0px 0px 5px 5px #B22222;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9jc3NGaWxlcy9uYXZCYXIuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksYUFBYTtJQUNiLHlCQUF5QjtJQUN6QixXQUFXO0lBQ1gsWUFBWTtBQUNoQjs7QUFFQTtJQUNJLHFCQUFxQjtJQUNyQixVQUFVO0lBQ1YsY0FBYztJQUNkLGtCQUFrQjtJQUNsQixjQUFjO0lBQ2QsZ0NBQWdDO0lBQ2hDLGVBQWU7QUFDbkI7O0FBRUE7SUFDSSxhQUFhO0lBQ2Isb0JBQW9CO0lBQ3BCLFVBQVU7SUFDVixtQkFBbUI7QUFDdkI7QUFDQTtJQUNJLGNBQWM7SUFDZCxlQUFlO0lBQ2YseUJBQXlCO0FBQzdCOztBQUVBO0lBQ0ksbUNBQW1DO0FBQ3ZDOztBQUVBO0lBQ0kscUJBQXFCO0lBQ3JCLFlBQVk7QUFDaEIiLCJzb3VyY2VzQ29udGVudCI6WyJuYXYge1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogIzVGOUVBMDtcbiAgICB3aWR0aDogMTAwJTtcbiAgICBoZWlnaHQ6IDEwdmg7XG59XG5cbm5hdiBoMSB7XG4gICAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xuICAgIHdpZHRoOiA1MCU7XG4gICAgbWFyZ2luOiBhdXRvIDA7XG4gICAgcGFkZGluZy1sZWZ0OiAycmVtO1xuICAgIGNvbG9yOiAjRkZGRjk5O1xuICAgIHRleHQtc2hhZG93OiA1cHggNHB4IDJweCAjQjIyMjIyO1xuICAgIGZvbnQtc2l6ZTogOTBweDtcbn1cblxuLm5hdi1idG4ge1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAganVzdGlmeS1jb250ZW50OiBlbmQ7XG4gICAgd2lkdGg6IDUwJTtcbiAgICBwYWRkaW5nLXJpZ2h0OiAycmVtO1xufVxuLm5hdi1idG4gYnV0dG9uIHtcbiAgICBtYXJnaW46IGF1dG8gMDtcbiAgICBtYXJnaW4tbGVmdDogMiU7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogI0ZGRkY5OTtcbn1cblxuLm5hdi1idG4gYnV0dG9uOmhvdmVyIHtcbiAgICBib3gtc2hhZG93OiAwcHggMHB4IDVweCA1cHggI0IyMjIyMjtcbn1cblxubmF2IGEge1xuICAgIHRleHQtZGVjb3JhdGlvbjogbm9uZTtcbiAgICBjb2xvcjogYmxhY2s7XG59Il0sInNvdXJjZVJvb3QiOiIifQ== */</style><style>.body-container {
+    height: 80vh;
+    display: flex;
+    justify-content: space-around;
+    padding: 10% 5%;
+    flex-wrap: wrap;
+}
+
+.img-container {
+    width: 30%;
+    margin: 5% 0;
+}
+
+.img-container h3 {
+    text-align: center;
+}
+
+.imgTag{
+    height: 9rem;
+    width: 9rem;
+    margin: 0 auto;
+    display: block;
+    box-shadow: -5px 3px 5px 0px rgba(0,0,0,0.75);
+}
+
+.img-container button {
+    width: 70%;
+    font-size: 70%;
+    margin-left: 15%;
+}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9jc3NGaWxlcy9yZXN0YXVyYW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLFlBQVk7SUFDWixhQUFhO0lBQ2IsNkJBQTZCO0lBQzdCLGVBQWU7SUFDZixlQUFlO0FBQ25COztBQUVBO0lBQ0ksVUFBVTtJQUNWLFlBQVk7QUFDaEI7O0FBRUE7SUFDSSxrQkFBa0I7QUFDdEI7O0FBRUE7SUFDSSxZQUFZO0lBQ1osV0FBVztJQUNYLGNBQWM7SUFDZCxjQUFjO0lBQ2QsNkNBQTZDO0FBQ2pEOztBQUVBO0lBQ0ksVUFBVTtJQUNWLGNBQWM7SUFDZCxnQkFBZ0I7QUFDcEIiLCJzb3VyY2VzQ29udGVudCI6WyIuYm9keS1jb250YWluZXIge1xuICAgIGhlaWdodDogODB2aDtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGp1c3RpZnktY29udGVudDogc3BhY2UtYXJvdW5kO1xuICAgIHBhZGRpbmc6IDEwJSA1JTtcbiAgICBmbGV4LXdyYXA6IHdyYXA7XG59XG5cbi5pbWctY29udGFpbmVyIHtcbiAgICB3aWR0aDogMzAlO1xuICAgIG1hcmdpbjogNSUgMDtcbn1cblxuLmltZy1jb250YWluZXIgaDMge1xuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcbn1cblxuLmltZ1RhZ3tcbiAgICBoZWlnaHQ6IDlyZW07XG4gICAgd2lkdGg6IDlyZW07XG4gICAgbWFyZ2luOiAwIGF1dG87XG4gICAgZGlzcGxheTogYmxvY2s7XG4gICAgYm94LXNoYWRvdzogLTVweCAzcHggNXB4IDBweCByZ2JhKDAsMCwwLDAuNzUpO1xufVxuXG4uaW1nLWNvbnRhaW5lciBidXR0b24ge1xuICAgIHdpZHRoOiA3MCU7XG4gICAgZm9udC1zaXplOiA3MCU7XG4gICAgbWFyZ2luLWxlZnQ6IDE1JTtcbn0iXSwic291cmNlUm9vdCI6IiJ9 */</style><style>.main-body {
+    display: flex;
+    height: 90vh;
+    background-color: #FFFF99;
+}
+.left-side {
+    width: 50%;
+    text-align: center;
+    margin: 10% 0;
+}
+.right-side {
+    width: 50%;
+    text-align: center;
+    margin: 10% 0;
+}
+.submit-button {
+    background-color: #B22222;
+    border: transparent;
+    padding: 10px;
+    border-radius: 16px;
+    margin-top: 10px;
+}
+.submit-button:hover {
+    box-shadow: 0px 0px 5px 5px #5F9EA0;
+}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9jc3NGaWxlcy9yZXZpZXdDVS5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxhQUFhO0lBQ2IsWUFBWTtJQUNaLHlCQUF5QjtBQUM3QjtBQUNBO0lBQ0ksVUFBVTtJQUNWLGtCQUFrQjtJQUNsQixhQUFhO0FBQ2pCO0FBQ0E7SUFDSSxVQUFVO0lBQ1Ysa0JBQWtCO0lBQ2xCLGFBQWE7QUFDakI7QUFDQTtJQUNJLHlCQUF5QjtJQUN6QixtQkFBbUI7SUFDbkIsYUFBYTtJQUNiLG1CQUFtQjtJQUNuQixnQkFBZ0I7QUFDcEI7QUFDQTtJQUNJLG1DQUFtQztBQUN2QyIsInNvdXJjZXNDb250ZW50IjpbIi5tYWluLWJvZHkge1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgaGVpZ2h0OiA5MHZoO1xuICAgIGJhY2tncm91bmQtY29sb3I6ICNGRkZGOTk7XG59XG4ubGVmdC1zaWRlIHtcbiAgICB3aWR0aDogNTAlO1xuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgICBtYXJnaW46IDEwJSAwO1xufVxuLnJpZ2h0LXNpZGUge1xuICAgIHdpZHRoOiA1MCU7XG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xuICAgIG1hcmdpbjogMTAlIDA7XG59XG4uc3VibWl0LWJ1dHRvbiB7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogI0IyMjIyMjtcbiAgICBib3JkZXI6IHRyYW5zcGFyZW50O1xuICAgIHBhZGRpbmc6IDEwcHg7XG4gICAgYm9yZGVyLXJhZGl1czogMTZweDtcbiAgICBtYXJnaW4tdG9wOiAxMHB4O1xufVxuLnN1Ym1pdC1idXR0b246aG92ZXIge1xuICAgIGJveC1zaGFkb3c6IDBweCAwcHggNXB4IDVweCAjNUY5RUEwO1xufSJdLCJzb3VyY2VSb290IjoiIn0= */</style></head>
+  <body>
+    <div id="pronounceRootElement" class="pronounceRootElementItem" style="position: fixed; top: 0px; left: 0px; width: 1px; height: 1px; z-index: 2147483645;"><div id="pronounceRootElementInner"></div></div><noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  
+
+<iframe id="webpack-dev-server-client-overlay" src="./React App_files/saved_resource.html" style="position: fixed; inset: 0px; width: 100vw; height: 100vh; border: none; z-index: 2147483647;"></iframe></body></html>
