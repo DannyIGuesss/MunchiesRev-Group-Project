@@ -29,7 +29,7 @@ const SeeReviews= () => {
             {
                 reviews.map((eachReview,index) => (
                     <div className='p-3 m-3 w-25' key={index} >
-                        <p>Restaurant: {eachReview.restaurantName}</p> 
+                        <p>Restaurant: {eachReview.restaurant_id}</p> 
                         <p>Review: {eachReview.review}</p>
                         <p>Rating: {eachReview.rating}</p>
                         <p>Posted By: {eachReview.username}</p>

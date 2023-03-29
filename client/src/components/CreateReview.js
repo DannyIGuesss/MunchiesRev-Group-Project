@@ -15,7 +15,8 @@ const CreateReview = (props) => {
     const {loggedUser, setLoggedUser} = useContext(LoggedUserContext);
     const { restaurants, SetRestaurants} = useContext(RestaurantsContext)
     const navigate = useNavigate();
-    console.log(restaurants)
+
+
     const handleSubmit = (e) => {
         e.preventDefault()
         console.log('submit review')
@@ -62,7 +63,7 @@ const CreateReview = (props) => {
                                         {
                                             restaurants.map((shop, index) => {
                                                 return (
-                                                    <option value={index}>{shop}</option>
+                                                    <option value={shop}>{shop}</option>
                                                 )
                                             })
                                         }
