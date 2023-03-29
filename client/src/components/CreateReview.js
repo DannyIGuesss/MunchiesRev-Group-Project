@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, {useContext, useState} from 'react';
 import {Link, useNavigate, useParams} from 'react-router-dom'
 import { LoggedUserContext } from '../context/loggedUserContext'
+import { RestaurantsContext } from '../context/restaurantContext';
 import ('../cssFiles/navBar.css')
 import ('../cssFiles/reviewCU.css')
 
@@ -12,6 +13,7 @@ const CreateReview = (props) => {
     const [review, setReview] = useState("");
 
     const {loggedUser, setLoggedUser} = useContext(LoggedUserContext);
+    const { restaurants, SetRestaurants} = useContext(RestaurantsContext)
     const navigate = useNavigate();
 
     const handleSubmit = (e) => {
@@ -51,8 +53,13 @@ const CreateReview = (props) => {
                                 <div className="form-outline">
                                     <label>Restaurant:</label>
                                     <select className="form-select" type='text' onChange={e=>setRestaurant(e.target.value)}>
-                                        <option value='0'>Beans</option>
-                                        <option value='1'>Frijoles</option>
+                                        {
+                                            restaurants.map((shop, index) => {
+                                                return (
+                                                    <option value={index}>{shop}</option>
+                                                )
+                                            })
+                                        }
                                     </select>
                                 </div>
                             </div>

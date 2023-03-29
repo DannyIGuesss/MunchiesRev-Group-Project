@@ -9,12 +9,14 @@ import Reviews from './components/Reviews';
 import CreateReview from './components/CreateReview';
 import UpdateReview from './components/UpdateReview';
 import { LoggedUserProvider } from './context/loggedUserContext';
+import { RestaurantsProvider } from './context/restaurantContext';
 
 
 function App() {
 
   return (
     <main>
+      <RestaurantsProvider>
       <LoggedUserProvider>
       <BrowserRouter>
         <Routes>
@@ -28,6 +30,7 @@ function App() {
         </Routes>
       </BrowserRouter>
       </LoggedUserProvider>
+      </RestaurantsProvider>
     </main>
   );
 }
