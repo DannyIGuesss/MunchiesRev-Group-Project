@@ -8,6 +8,7 @@ import Register from './components/Register';
 import Reviews from './components/Reviews';
 import CreateReview from './components/CreateReview';
 import UpdateReview from './components/UpdateReview';
+import SeeReviews from './components/SeeReviews';
 import { LoggedUserProvider } from './context/loggedUserContext';
 import { RestaurantsProvider } from './context/restaurantContext';
 
@@ -26,7 +27,8 @@ function App() {
           <Route exact path='/Register' element={<Register/>}/>                 {/* Register a new user */}
           <Route exact path='/Reviews/:_id' element={<Reviews/>}/>              {/* Shows all reviews for a specific restraunt */}
           <Route exact path='/CreateReview' element={<CreateReview/>}/>         {/* Create a review for a specific restraunt */}
-          <Route exact path='/UpdateReview/:_id' element={<UpdateReview/>}/>    {/* Update a specific review */}{/*/:_id*/}
+          <Route exact path='/UpdateReview/:_id' element={<UpdateReview/>}/>
+          <Route exact path='/SeeReviews' element={<SeeReviews/>}/>          {/* Update a specific review */}{/*/:_id*/}
         </Routes>
       </BrowserRouter>
       </LoggedUserProvider>

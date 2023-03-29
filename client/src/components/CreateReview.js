@@ -15,11 +15,13 @@ const CreateReview = (props) => {
     const {loggedUser, setLoggedUser} = useContext(LoggedUserContext);
     const { restaurants, SetRestaurants} = useContext(RestaurantsContext)
     const navigate = useNavigate();
-
+    console.log(restaurants)
     const handleSubmit = (e) => {
         e.preventDefault()
         console.log('submit review')
+
         axios.post(`http://localhost:8000/api/postReview/${restaurant}`, {
+            restaurant,
             review,
             rating
         }, {withCredentials: true})
@@ -36,7 +38,11 @@ const CreateReview = (props) => {
             <nav>
                 <h1>MunchiesRev</h1>
                 <div className='nav-btn'>
-                    {loggedUser ? <button><Link to={'/login'}>Login</Link></button> : <button><Link to={'/Logout'}>Logout</Link></button>}
+                    {
+                        loggedUser ? <button><Link to={'/login'}>Login</Link></button> 
+                        : 
+                        <button><Link to={'/Logout'}>Logout</Link></button>
+                    }
                 </div>
             </nav>
             <div className='main-body'>

@@ -35,7 +35,13 @@ const Login = (props) => {
 
                 Login
             </h2>
-            {errors && <span className='accent'>{errors}</span>}
+            {
+                errors?
+                <p className='text-danger'>{errors}</p>
+                :
+                null
+            }
+            {/* {errors && <span className='accent'>{errors}</span>} */}
             <form className="mx-auto col-10 col-md-8 col-lg-6" onSubmit = {handleSubmit}>
                 <div className="form-group ">
                     {/* email */}
