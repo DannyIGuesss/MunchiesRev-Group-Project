@@ -2,6 +2,7 @@ const Review = require('../models/review.model');
 const jwt = require('jsonwebtoken')
 
 module.exports = {
+    //CREATE
     postReview: async (req, res) => {
         try {
             const review = req.body
@@ -19,9 +20,53 @@ module.exports = {
 
         }
         catch(err) {
-            res.status(400).json({error: err, message: "there was an error"})
+            res.status(400).json(err)
         }
+    },
 
-    // TODO: COMPLETE THIS PAGE 
+    //READ
+    getOneReview: async (req, res) => {
+        try {
+            const review_id = req.params.id
+            const oneReview = await Review.findById(review_id)
+            const allReviewsOnOneRestaurant = await Review.find({review_id:review_id})
+            res.json({oneReview:oneReview, allReviewsOnOneRestaurant:allReviewsOnOneRestaurant})
+        }
+        catch(err) {
+            res.status(500).json(err)
+        }
+    },
+
+    //UPDATE
+    updateReview: async (req, res) => {
+        try {
+            const update = await Review.findOneAndUpdate( { _id: req.params.id }, req.body, { new: true, runValidators: true } )
+            res.json(update)
+        }
+        catch(err) {
+            res.status(500).json(err)
+        }
+    },
+
+    //DELETE
+    deleteReview: async (req, res) => {
+        try {
+            const deleteOne = await Review.deleteOne({_id: req.params.id})
+            res.json(deleteOne)
+        }
+        catch(err) {
+            res.status(500).json(err)
+        }
+    },
+
+    //ALL REVIEWS
+    allReviews: async (req, res) => {
+        try{
+            const all = await Review.find()
+            res.json(all)
+        }
+        catch(err) {
+            res.status(500).json(err)
+        }
     }
 }
