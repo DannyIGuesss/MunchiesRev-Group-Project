@@ -20,6 +20,14 @@ const SeeReviews= () => {
             })
     }, [])
 
+    const countStars = (numberStars) => {
+        let stars = ''
+        for (let i = 0; i < numberStars; i++) {
+            stars += '⭐'
+        }
+        return stars
+    }
+
     return (
         
         <div className='p-4'>
@@ -31,7 +39,7 @@ const SeeReviews= () => {
                     <div className='p-3 m-3 w-25' key={index} >
                         <p>Restaurant: {eachReview.restaurant_id}</p> 
                         <p>Review: {eachReview.review}</p>
-                        <p>Rating: {eachReview.rating}</p>
+                        <p>Rating: {countStars(eachReview.rating) } </p>
                         <p>Posted By: {eachReview.username}</p>
                     </div>
                 ))   
