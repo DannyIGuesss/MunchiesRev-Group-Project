@@ -21,7 +21,8 @@ const Landing = (props) => {
             <div className='main-body'>
                 <div className='left-side'>
                     <h2>What we do here at MunchiesRev</h2>
-                    <p>Someone who is more descriptive can write about what the website is about!</p>
+                    <p>Restaurant review platform, that makes dine-in/take-out decisions easy.</p>
+                    <p>Did you have a good experience? <br/>Did you have a bad experience? <br/> Tell us! we all would like to know</p>
                 </div>
                 <div className='right-side'>
                     <div className='slider'>
