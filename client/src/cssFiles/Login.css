@@ -1,0 +1,52 @@
+body {
+    background-color: #dbdbdb;
+}
+
+#login-container {
+    background: linear-gradient(
+        to right,
+        transparent 50%,
+        #ffffff 50%
+    ),
+    url('../images/quality-restaurant.jpg');
+    background-repeat: no-repeat;
+    background-size: fit;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+    max-width: 75%;
+    border-radius: 13px 13px 13px 13px;
+    -webkit-border-radius: 13px 13px 13px 13px;
+    -moz-border-radius: 13px 13px 13px 13px;
+    box-shadow: 7px 5px 5px 0px rgba(115,115,115,0.59);
+    -webkit-box-shadow: 7px 5px 5px 0px rgba(115,115,115,0.59);
+    -moz-box-shadow: 7px 5px 5px 0px rgba(115,115,115,0.59);
+}
+
+#center { 
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+/* .form-control{
+    width: 200%;
+} */
+
+/* #left-login {
+    background-image: url('../images/quality-restaurant.jpg');
+    background-size: 50%;
+} */
+
+
+@media (min-width:900px) {
+    #login-container {
+        padding: 5%;
+    }
+}

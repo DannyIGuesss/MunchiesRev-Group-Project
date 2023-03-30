@@ -3,7 +3,8 @@ import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 import {Link} from 'react-router-dom'
 import { LoggedUserContext } from '../context/loggedUserContext'; // logged feature
-
+import ('../cssFiles/Login.css')
+import ('../cssFiles/navBar.css')
 
 
 const Login = (props) => {
@@ -12,50 +13,69 @@ const Login = (props) => {
     const [password, setPassword] = useState('')
     const [errors, setErrors] = useState('')
     const navigate = useNavigate()
+
+
     const handleSubmit = (e) => {
         e.preventDefault()
-        axios.post('http://localhost:8000/api/login',{ email, password}, { withCredentials: true })
+        axios.post('http://localhost:8000/api/login',{email, password}, { withCredentials: true })
             .then ( res => {
                 console.log('user', res.data.user);
                 setLoggedUser(res.data.user)//sets the user globally so other sites will have information of your account 
                 navigate("/Restaurants");//sends you back to the restaurant site
             })
-            .catch( err => {console.log(err.response.data); setErrors(err.response.data.errors)} )
+            .catch( err => {
+                setErrors(err.response.data);
+            })
     }
-    return (
-        <div className='max-content'>
-            <nav>
-                <h1>MunchiesRev</h1>
-                <div className='nav-btn'>
-                    <button><Link to={'/'}>Home</Link></button>
-                    <button><Link to={'/register'}>Register</Link></button>
-                </div>
-            </nav>
-            <h2 className="mx-auto col-10 col-md-8 col-lg-6">
 
-                Login
-            </h2>
-            {
-                errors?
-                <p className='text-danger'>{errors}</p>
-                :
-                null
-            }
-            {/* {errors && <span className='accent'>{errors}</span>} */}
-            <form className="mx-auto col-10 col-md-8 col-lg-6" onSubmit = {handleSubmit}>
-                <div className="form-group ">
-                    {/* email */}
-                    <label >Email:</label>
-                    <input className="form-control" type='text' onChange={ e => setEmail(e.target.value) }/>
-                    
-                </div>
-                <div className="form-group ">
-                    {/* password */}
-                    <label>Password:</label>
-                    <input className="form-control" type='password' onChange={ e => setPassword(e.target.value) } />
-                </div>
-                <input className= 'glow-on-hover' type='submit' value='Submit'/>
-            </form>
+
+    return (
+        <div>
+        <nav>
+            <h1>MunchiesRev</h1>
+            <div className='nav-btn'>
+                <button><Link to={'/'}>Home</Link></button>
+                <button><Link to={'/register'}>Register</Link></button>
+            </div>
+        </nav>
+
+        {/* MAIN CONTENT  */}
+        <div id='center'>    
+            <div id="login-container" className=''>
+
+                {/* LEFT SIDE */}
+                <div id="left-login"></div>
+
+                {/* RIGHT SIDE */}
+                <div id="right-login">
+                    <div id="right-inside" className=''>
+                        <h2>Welcome back!</h2>
+
+                            {
+                                errors.message?
+                                <p className='text-danger'>{errors.message}</p>
+                                :
+                                null
+                            }
+
+                        <form id="form" className="col-10 col-md-8 col-lg-6" onSubmit = {handleSubmit}>
+                            <div id="form-input" className="form-group">
+                                {/* email */}
+                                <label >Email:</label>
+                                <input className="form-control" type='text' placeholder="Type Email" onChange={ e => setEmail(e.target.value) }/>
+                                
+                            </div>
+                            <div id="form-input" className="form-group mt-3">
+                                {/* password */}
+                                <label>Password:</label>
+                                <input className="form-control" type='password' placeholder='Password' onChange={ e => setPassword(e.target.value) } />
+                            </div>
+                            <button className= 'btn btn-secondary btn-sm mt-3' type='submit'>Submit</button>
+                        </form> 
+                    </div>
+                </div>  
+            </div>
+        </div>
         </div>
 )}
 

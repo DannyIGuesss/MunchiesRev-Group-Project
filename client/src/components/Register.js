@@ -35,6 +35,8 @@ const Register = (props) => {
             } )
             .catch( res => setErrors(res.response.data.errors) )
     }
+
+    
     return (
         <div>
             <nav>
