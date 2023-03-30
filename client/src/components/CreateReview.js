@@ -9,7 +9,7 @@ import ('../cssFiles/reviewCU.css')
 const CreateReview = (props) => {
     const [errors, setErrors] = useState([]);
     const [restaurant, setRestaurant] = useState();
-    const [rating, setRating] = useState("");
+    const [rating, setRating] = useState("1");
     const [review, setReview] = useState("");
 
     const {loggedUser, setLoggedUser} = useContext(LoggedUserContext);
@@ -40,7 +40,7 @@ const CreateReview = (props) => {
                 <h1>MunchiesRev</h1>
                 <div className='nav-btn'>
                     {
-                        loggedUser ? <button><Link to={'/login'}>Login</Link></button> 
+                        !loggedUser._id ? <button><Link to={'/login'}>Login</Link></button> 
                         : 
                         <button><Link to={'/Logout'}>Logout</Link></button>
                     }
