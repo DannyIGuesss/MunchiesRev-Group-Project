@@ -1,10 +1,13 @@
-import React, {useState} from 'react'
+import React, {useState, useContext} from 'react'
 import axios from 'axios'
 import { useNavigate} from 'react-router-dom'
 import {Link} from 'react-router-dom'
+import { LoggedUserContext } from '../context/loggedUserContext'; // logged feature
+
 import ('../cssFiles/navBar.css')
 
 const Register = (props) => {
+    const {loggedUser, setLoggedUser} = useContext(LoggedUserContext) // logged feature
     const [firstName, setFirstName] = useState("")
     const [lastName, setLastName] = useState("")
     const [email, setEmail] = useState("")
@@ -26,6 +29,7 @@ const Register = (props) => {
         }, { withCredentials: true })
             .then ( res => {
                 console.log("logged user" + res.data.user)
+                setLoggedUser(res.data.user)
                 // setUser(res.data.user)
                 navigate('/Restaurants')
             } )
