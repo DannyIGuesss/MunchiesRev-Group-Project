@@ -12,6 +12,7 @@ nav h1 {
     padding-left: 2rem;
     color: #FFFF99;
     text-shadow: 5px 4px 2px #B22222;
+    font-size: 4vmin;
     /* font-size: 90px; */
 }
 
@@ -21,6 +22,7 @@ nav h1 {
     width: 50%;
     padding-right: 2rem;
 }
+
 .nav-btn button {
     margin: auto 0;
     margin-left: 2%;

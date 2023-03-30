@@ -36,16 +36,18 @@ const CreateReview = (props) => {
 
     return (
         <div>
-            <nav>
-                <h1>MunchiesRev</h1>
-                <div className='nav-btn'>
-                    {
-                        loggedUser ? <button><Link to={'/login'}>Login</Link></button> 
-                        : 
-                        <button><Link to={'/Logout'}>Logout</Link></button>
-                    }
-                </div>
-            </nav>
+            <div>
+                <nav>
+                    <h1>MunchiesRev</h1>
+                    <div className='nav-btn'>
+                        {
+                            loggedUser ? <button><Link to={'/login'}>Login</Link></button> 
+                            : 
+                            <button><Link to={'/Logout'}>Logout</Link></button>
+                        }
+                    </div>
+                </nav>
+            </div>
             <div className='main-body'>
                 <div className='left-side'>
                     <h2>Hello {loggedUser.firstName}, please make a review</h2>

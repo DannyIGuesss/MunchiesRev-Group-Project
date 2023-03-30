@@ -2,7 +2,6 @@ import React, {useState} from 'react'
 import axios from 'axios'
 import { useNavigate} from 'react-router-dom'
 import {Link} from 'react-router-dom'
-
 import ('../cssFiles/navBar.css')
 
 const Register = (props) => {
@@ -32,6 +31,8 @@ const Register = (props) => {
             } )
             .catch( res => setErrors(res.response.data.errors) )
     }
+
+    
     return (
         <div>
             <nav>
