@@ -49,7 +49,7 @@ const SeeReviews= () => {
     }
     return (
         
-        <div className='p-4'>
+        <div>
             <nav>
                 <h1>MunchiesRev</h1>
                 
