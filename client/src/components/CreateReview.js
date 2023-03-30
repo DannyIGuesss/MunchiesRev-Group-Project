@@ -8,7 +8,7 @@ import ('../cssFiles/reviewCU.css')
 
 const CreateReview = (props) => {
     const [errors, setErrors] = useState([]);
-    const [restaurant, setRestaurant] = useState();
+    const [restaurant, setRestaurant] = useState("InNOut");
     const [rating, setRating] = useState("1");
     const [review, setReview] = useState("");
 
