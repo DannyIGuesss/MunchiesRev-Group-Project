@@ -18,8 +18,16 @@ const SeeReviews= () => {
                 setReviews([])
                 navigate('/')
             })
-    }, [])
-
+    },[])
+    const handleDelete = (id) => {
+        
+        axios.delete(`http://localhost:8000/api/delete/${id}`)
+        .then(res => {
+            console.log(id)
+            navigate('/Restaurants')
+        })
+        .catch(res=> console.log("couldnt delete") )
+    }
     const countStars = (numberStars) => {
         let stars = ''
         for (let i = 0; i < numberStars; i++) {
@@ -41,6 +49,9 @@ const SeeReviews= () => {
                         <p>Review: {eachReview.review}</p>
                         <p>Rating: {countStars(eachReview.rating) } </p>
                         <p>Posted By: {eachReview.username}</p>
+                        
+                        <button><Link to={`/UpdateReview/${eachReview._id}`}>Update</Link></button>
+                        <button onClick={e=>handleDelete(eachReview._id)}>Delete</button>
                     </div>
                 ))   
             }
