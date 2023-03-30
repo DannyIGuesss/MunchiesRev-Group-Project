@@ -33,20 +33,14 @@ body {
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
-}
-
-/* .form-control{
-    width: 200%;
-} */
-
-/* #left-login {
-    background-image: url('../images/quality-restaurant.jpg');
-    background-size: 50%;
-} */
+} 
 
 
-@media (min-width:900px) {
+@media (min-width:1200px) {
     #login-container {
         padding: 5%;
     }
+    /* #right-inside h2 {
+        font-size: 3vmin;
+    } */
 }

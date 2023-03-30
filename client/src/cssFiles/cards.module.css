@@ -6,15 +6,10 @@
     background-color: #FFFF99;
 }
 
-p {
-
+.review p {
     margin: auto 0;
     color: #1003ff;
     text-shadow: 5px 4px 2px #b28722;
     /* font-size: 90px; */
 }
-
-
-
-
 

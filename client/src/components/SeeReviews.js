@@ -2,7 +2,8 @@ import React, { useState, useEffect,useContext } from 'react';
 import axios from 'axios'
 import { Link, useNavigate} from 'react-router-dom';
 import { LoggedUserContext } from '../context/loggedUserContext'
-import ('../cssFiles/cards.css')
+import ('../cssFiles/cards.module.css')
+
 const SeeReviews= () => {
     const [reviews, setReviews] = useState([])
     const navigate = useNavigate()
