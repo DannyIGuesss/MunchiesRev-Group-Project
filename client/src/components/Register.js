@@ -3,7 +3,6 @@ import axios from 'axios'
 import { useNavigate} from 'react-router-dom'
 import {Link} from 'react-router-dom'
 import { LoggedUserContext } from '../context/loggedUserContext'; // logged feature
-
 import ('../cssFiles/navBar.css')
 
 const Register = (props) => {

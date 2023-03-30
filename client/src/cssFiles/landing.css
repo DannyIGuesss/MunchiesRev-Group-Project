@@ -25,6 +25,7 @@
     animation: slide 20s infinite;
     box-shadow: -4px 14px 47px 19px rgba(0,0,0,0.75);
 }
+
 @keyframes slide{
     25%{
         background: url('../images/restaurants2.jpg');

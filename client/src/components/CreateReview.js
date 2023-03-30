@@ -11,7 +11,6 @@ const CreateReview = (props) => {
     const [restaurant, setRestaurant] = useState("InNOut");
     const [rating, setRating] = useState("1");
     const [review, setReview] = useState("");
-
     const {loggedUser, setLoggedUser} = useContext(LoggedUserContext);
     const { restaurants, SetRestaurants} = useContext(RestaurantsContext)
     const navigate = useNavigate();
@@ -20,7 +19,6 @@ const CreateReview = (props) => {
     const handleSubmit = (e) => {
         e.preventDefault()
         console.log('submit review')
-
         axios.post(`http://localhost:8000/api/postReview/${restaurant}`, {
             restaurant,
             review,
@@ -34,31 +32,27 @@ const CreateReview = (props) => {
             .catch( res => setErrors(res) )
     }
 
+    const logout = () =>{
+        axios.post('http://localhost:8000/api/logout', {}, {withCredentials:true})
+        .then((res) => {
+            console.log(res)
+            navigate('/')
+        })
+        .catch((err) => {
+            console.log(err);
+        })
+    }
+
+
     return (
         <div>
             <nav>
                 <h1>MunchiesRev</h1>
                 <div className='nav-btn'>
-                    {
-                        !loggedUser._id ? <button><Link to={'/login'}>Login</Link></button> 
-                        : 
-                        <button><Link to={'/Logout'}>Logout</Link></button>
-                    }
+                    {!loggedUser._id ? <button><Link to={'/login'}>Login</Link></button> : <button onClick={logout}>Logout</button>}
                 </div>
             </nav>
         <div>
-            <div>
-                <nav>
-                    <h1>MunchiesRev</h1>
-                    <div className='nav-btn'>
-                        {
-                            loggedUser ? <button><Link to={'/login'}>Login</Link></button> 
-                            : 
-                            <button><Link to={'/Logout'}>Logout</Link></button>
-                        }
-                    </div>
-                </nav>
-            </div>
             <div className='main-body'>
                 <div className='left-side'>
                     <h2>Hello {loggedUser.firstName}, please make a review</h2>
