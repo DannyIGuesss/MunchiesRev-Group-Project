@@ -53,13 +53,13 @@ const Register = (props) => {
                 <div className="form-group ">
                     {/* first name */}
 
+                    <br/>
                     {
                         errors.firstName?
                         <p className='text-danger'>{errors.firstName.message}</p>
                         :
                         null
                     }
-                    <br/>
                     <label>First Name:</label>
                     <input className="form-control" type='text' onChange={e=>setFirstName(e.target.value)}/>
 
@@ -67,27 +67,26 @@ const Register = (props) => {
 
                 <div className="form-group">
                     {/* last name */}
+                    <br/>
                     {
                         errors.lastName?
                         <p className='text-danger'>{errors.lastName.message}</p>
                         :
                         null
                     }
-                    <br/>
                     <label>Last Name:</label>
                     <input className="form-control" type='text' onChange={e=>setLastName(e.target.value)}/>
 
                 </div>
                 <div className="form-group">
                     {/* email */}
+                    <br/>
                     {
                         errors.email?
                         <p className='text-danger'>{errors.email.message}</p>
                         :
                         null
                     }
-                    {errors.email && <span className="text-danger">{errors.email.message}</span>}
-                    <br/>
                     <label>Email:</label>
                     <input className="form-control" type='text' onChange={e=>setEmail(e.target.value)}/>
                 </div>
@@ -104,21 +103,26 @@ const Register = (props) => {
 
                 <div className="form-group">
                     {/* password */}
+                    <br/>
                     {
                         errors.password?
                         <p className='text-danger'>{errors.password.message}</p>
                         :
                         null
                     }
-                    <br/>
                     <label>Password:</label>
                     <input className="form-control" type='password' onChange={e=>setPassword(e.target.value)}/>
                     
                 </div>
                 <div className="form-group">
                     {/* confirm email */}
-                    {/* {errors.password && <span className="text-danger">{errors.password.message}</span>} */}
                     <br/>
+                    {
+                        errors.confirmPassword?
+                        <p className='text-danger'>{errors.confirmPassword.message}</p>
+                        :
+                        null
+                    }
                     <label>Confirm Password:</label>
                     <input className="form-control" type='password' onChange={e=>setConfirmPassword(e.target.value)}/>
 
