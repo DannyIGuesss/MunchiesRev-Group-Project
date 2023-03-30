@@ -105,6 +105,7 @@ const CreateReview = (props) => {
                 </div>
             </div>
         </div>
+        </div>
 )}
 
 export default CreateReview;
